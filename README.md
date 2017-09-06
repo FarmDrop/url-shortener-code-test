@@ -60,3 +60,7 @@ Either send us a link to the repository on somewhere like github or bitbucket
     git bundle create yournamehere-url-shortener-test.bundle master
 
 And send us the resulting `yournamehere-url-shortener-test.bundle` file.
+
+This `.bundle` file can be cloned using:
+
+    git bundle clone bundle-filename.bundle -b master directory-name
