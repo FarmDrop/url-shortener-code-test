@@ -57,6 +57,6 @@ guide of how to run it.
 Either send us a link to the repository on somewhere like github or bitbucket
 (bitbucket has free private repositories) or send us a git bundle.
 
-    git bundle create name-url-shortener-test.bundle master
+    git bundle create yournamehere-url-shortener-test.bundle master
 
-And send us the resulting `name-url-shortener-test.bundle` file.
+And send us the resulting `yournamehere-url-shortener-test.bundle` file.
