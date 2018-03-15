@@ -1,10 +1,13 @@
 # Url Shortener Code Test
 
-We'd like you to create a URL shortening service.
-- It should have a route where you can send a POST request with a URL in the
-  body, which returns a short URL.
+Without using an external database, we'd like you to create a URL shortening
+service. The URLs do not need to persist between restarts, but should be
+shareable between different clients while the server is running.
 
-e.g.
+- There should be an endpoint that responds to `POST` with a json body
+  containing a URL, which responds with a JSON repsonse of the short url and
+  the orignal URL, as in the following curl example:
+
 ```
 curl localhost:4000 -XPOST -d '{ "url": "http://www.farmdrop.com" }'
 { "short_url": "/abc123", "url": "http://www.farmdrop.com" }
@@ -12,9 +15,8 @@ curl localhost:4000 -XPOST -d '{ "url": "http://www.farmdrop.com" }'
 
 
 - When you send a GET request to a previously returned URL, it should redirect
-  to the POSTed URL.
+  to the POSTed URL, as shown in the following curl example:
 
-e.g.
 ```
 curl -v localhost:4000/abc123
 ...
@@ -24,12 +26,6 @@ curl -v localhost:4000/abc123
 ...
 { "url": "http://www.farmdrop.com" }
 ```
-
-
-- We'd also like a simple frontend that can create and display shortened URLs
-  without reloading the page.
-- For simplicity, don't worry about persisting the URLs between restarts (ie,
-  we don't need it to talk to an external database).
 
 Use whatever languages and frameworks you are comfortable with. Don't worry
 about getting the whole thing working flawlessly, this is more to see how you
@@ -48,6 +44,9 @@ Bonus points:
 - We'd be very happy to see a Dockerfile to run the project. This by no means a
   requirement, so don't go reading the Docker docs if you've never worked with
   it.
+- If you'd like to show off your frontend skills, you could create a simple
+  frontend that can create and display shortened URLs without reloading the
+  page.
 
 ## Submission
 
